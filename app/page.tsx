@@ -1,65 +1,76 @@
-import Image from "next/image";
+import { H1, P } from "@/components/ui/Typography";
+import { Button } from "@/components/ui/Button";
+import { FaRegCheckCircle } from "react-icons/fa";
+import { ServicesSection } from "@/components/sections/ServicesSection";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <main>
+      <div
+        className="min-h-[100svh] bg-cover bg-center bg-no-repeat relative flex flex-col justify-end pt-[120px] md:pt-[150px] pb-8 md:pb-12 px-5 sm:px-8 lg:px-12"
+        style={{
+          backgroundImage: "url('/hero-image.jpg')",
+        }}
+      >
+        <div className="absolute inset-0 bg-zinc-950/80 pointer-events-none" />
+
+        {/* Main Content */}
+        <div className="relative z-10 max-w-[1000px] flex flex-col gap-5 md:gap-8 mb-10 md:mb-16 lg:mb-24 mt-auto">
+          <H1 className="uppercase font-display text-white !text-4xl sm:!text-5xl md:!text-6xl lg:!text-7xl !leading-[1.15] md:!leading-[1.05]">
+            PROTEKTOR —{" "}
+            <span className="text-white/50 block mt-2 lg:inline lg:mt-0">
+              ШИНОМОНТАЖ ПОВНОГО ЦИКЛУ ДЛЯ ТИХ, ХТО ЦІНУЄ СВОЄ АВТО
+            </span>
+          </H1>
+
+          <P className="text-white/80 max-w-3xl text-base sm:text-lg md:text-xl leading-relaxed">
+            Професійний шиномонтаж для легкових автомобілів та позашляховиків.
+            Виконуємо заміну, балансування та ремонт шин на сучасному
+            обладнанні. Гарантуємо надійне прилягання, ідеальне балансування та
+            тривалий термін експлуатації коліс.
+          </P>
+
+          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-5 mt-2 md:mt-4">
+            <Button
+              href="tel:+380678987654"
+              variant="primary"
+              className="bg-white text-red-800 hover:bg-red-800 hover:text-white w-full sm:w-auto"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              Розрахувати вартість
+            </Button>
+            <Button
+              href="tel:+380678987654"
+              variant="outline"
+              className="w-full sm:w-auto"
             >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+              Записатись
+            </Button>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        {/* Bottom Features */}
+        <div className="relative z-10 w-full mt-6 md:mt-0">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 pt-6 md:pt-0 border-t border-white/10 md:border-transparent">
+            {[
+              "Точне комп'ютерне балансування",
+              "Відновлення геометрії дисків",
+              "Швидке обслуговування та гарантія якості",
+              "Працюємо з усіма брендами",
+            ].map((feature, index) => (
+              <div
+                key={index}
+                className="flex items-start sm:items-center gap-3 text-white"
+              >
+                <FaRegCheckCircle className="text-white w-5 h-5 flex-shrink-0 mt-0.5 sm:mt-0" />
+                <span className="text-sm sm:text-base md:text-lg font-medium leading-tight">
+                  {feature}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
-      </main>
-    </div>
+      </div>
+      <ServicesSection />
+    </main>
   );
 }
