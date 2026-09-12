@@ -6,7 +6,6 @@ import { H3, NavLink } from "../ui/Typography";
 import Link from "next/link";
 import {
   FaWhatsapp,
-  FaInstagram,
   FaPhone,
   FaBars,
   FaXmark,
@@ -89,15 +88,6 @@ export default function Header() {
                 aria-label="WhatsApp"
               >
                 <FaWhatsapp className="w-[22px] h-[22px]" />
-              </a>
-              <a
-                href={SITE.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white hover:text-accent-red transition-colors"
-                aria-label="Instagram"
-              >
-                <FaInstagram className="w-[22px] h-[22px]" />
               </a>
             </div>
 
@@ -209,15 +199,6 @@ export default function Header() {
                   aria-label="WhatsApp"
                 >
                   <FaWhatsapp className="w-[26px] h-[26px]" />
-                </a>
-                <a
-                  href={SITE.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white hover:text-accent-red transition-colors"
-                  aria-label="Instagram"
-                >
-                  <FaInstagram className="w-[26px] h-[26px]" />
                 </a>
               </div>
 

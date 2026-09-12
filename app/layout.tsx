@@ -64,7 +64,6 @@ export default function RootLayout({
               "@type": "AutoRepair",
               name: SITE.name,
               telephone: SITE.phoneE164,
-              email: SITE.email,
               address: SITE.address,
               openingHours: SITE.workingHours.map(
                 (w) => `${w.day} ${w.hours}`,

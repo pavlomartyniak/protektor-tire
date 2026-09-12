@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaWhatsapp, FaInstagram, FaPhone, FaLocationDot, FaEnvelope } from "react-icons/fa6";
+import { FaWhatsapp, FaPhone, FaLocationDot } from "react-icons/fa6";
 import { ROUTES } from "@/lib/routes";
 import { SITE, telLink, whatsappLink } from "@/lib/site-config";
 import { OpenStatus } from "@/components/ui/OpenStatus";
@@ -44,15 +44,6 @@ export default function Footer() {
             >
               <FaWhatsapp className="w-[22px] h-[22px]" />
             </a>
-            <a
-              href={SITE.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white/60 hover:text-accent-red transition-colors"
-              aria-label="Instagram"
-            >
-              <FaInstagram className="w-[22px] h-[22px]" />
-            </a>
           </div>
         </div>
 
@@ -84,13 +75,6 @@ export default function Footer() {
           >
             <FaPhone className="w-4 h-4 mt-0.5 flex-shrink-0 text-accent-red" />
             {SITE.phoneDisplay}
-          </a>
-          <a
-            href={`mailto:${SITE.email}`}
-            className="flex items-start gap-3 text-white/70 hover:text-white transition-colors text-sm"
-          >
-            <FaEnvelope className="w-4 h-4 mt-0.5 flex-shrink-0 text-accent-red" />
-            {SITE.email}
           </a>
           <a
             href={SITE.mapLink}

@@ -1,11 +1,5 @@
 import type { Metadata } from "next";
-import {
-  FaPhone,
-  FaWhatsapp,
-  FaInstagram,
-  FaLocationDot,
-  FaEnvelope,
-} from "react-icons/fa6";
+import { FaPhone, FaWhatsapp, FaLocationDot } from "react-icons/fa6";
 import { PageHero } from "@/components/layout/PageHero";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { ContactForm } from "@/components/booking/ContactForm";
@@ -48,23 +42,10 @@ export default function ContactsPage() {
                 external
               />
               <ContactRow
-                icon={FaEnvelope}
-                label="Email"
-                value={SITE.email}
-                href={`mailto:${SITE.email}`}
-              />
-              <ContactRow
                 icon={FaLocationDot}
                 label="Адреса"
                 value={SITE.address}
                 href={SITE.mapLink}
-                external
-              />
-              <ContactRow
-                icon={FaInstagram}
-                label="Instagram"
-                value="@protektor.tire"
-                href={SITE.instagram}
                 external
               />
             </div>

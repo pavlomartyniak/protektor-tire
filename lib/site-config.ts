@@ -4,12 +4,11 @@ export const SITE = {
   phoneDisplay: "067 898 76 54",
   phoneE164: "+380678987654",
   whatsapp: "380678987654",
-  instagram: "https://instagram.com/protektor.tire",
-  email: "info@protektor-tire.ua",
-  address: "м. Київ, вул. Промислова, 12",
+  address: "с. Малехів, вул. Львівська, 2",
   mapEmbedUrl:
-    "https://www.google.com/maps?q=%D0%9A%D0%B8%D1%97%D0%B2&output=embed",
-  mapLink: "https://maps.google.com/?q=Київ,+вул.+Промислова,+12",
+    "https://www.google.com/maps?q=%D0%9C%D0%B0%D0%BB%D0%B5%D1%85%D1%96%D0%B2,+%D0%B2%D1%83%D0%BB.+%D0%9B%D1%8C%D0%B2%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0+2&output=embed",
+  mapLink:
+    "https://maps.google.com/?q=Малехів,+вул.+Львівська+2",
   workingHours: [
     { day: "Понеділок – П'ятниця", hours: "08:00 – 20:00" },
     { day: "Субота", hours: "09:00 – 18:00" },
